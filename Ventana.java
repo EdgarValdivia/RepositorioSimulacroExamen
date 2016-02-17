@@ -8,9 +8,9 @@ import javax.swing.JButton;
 import javax.swing.JPasswordField;
 import javax.swing.WindowConstants;
 
- public class VentanaJava{
+ public class Ventana{
 
-     private JPanel panelSup,panelMed,panelX,panelInfe;          //paneles
+     private JPanel panelSup,panelMed,/*panelX,*/panelInfe;          //paneles
      private JLabel lblUsuario,lblContraseña,lblComentarios;     //etiquetas
      private JTextField txtUsuario;                              //campos de texto
      private JTextArea areaComentarios;                          //campos de area
@@ -34,30 +34,32 @@ import javax.swing.WindowConstants;
         panelMed.add(lblContraseña);
         panelMed.add(txtPass);
 }//Medio
-     public void panelNuevo(){
+
+    /* public void panelNuevo(){
         panelX = new JPanel();
         lblComentarios = new JLabel("Comentarios");
         areaComentarios = new JTextArea();   //capacidad del area
         panelX.setLayout(new BoxLayout(panelX, BoxLayout.X_AXIS));
         panelX.add(lblComentarios);
         panelX.add(areaComentarios);
-}//X
+}//X*/
+
      public void panelInferior(){
         panelInfe = new JPanel();
-        btnAceptar =  new JButton("Aceptar");
-        btnCancelar = new JButton("Cancelar");
+        btnAceptar =  new JButton("Cancelar");
+        btnCancelar = new JButton("OK");
         panelInfe.setLayout(new BoxLayout(panelInfe, BoxLayout.X_AXIS));
         panelInfe.add(btnAceptar);
         panelInfe.add(btnCancelar);
 }//Inferior
       public void ventana(){
         frame = new JFrame();
-        lblUsuario = new JLabel("Informacion De La Cuenta");
+        lblUsuario = new JLabel("Login");
         frame.setLayout(new BoxLayout(frame.getContentPane(),BoxLayout.Y_AXIS));
         frame.add(lblUsuario);
         frame.add(panelSup);
         frame.add(panelMed);
-        frame.add(panelX);
+                                  //  frame.add(panelX);
         frame.add(panelInfe);
         frame.pack();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -65,15 +67,15 @@ import javax.swing.WindowConstants;
         frame.setVisible(true);
 }//agregando al frame
 
-                public VentanaJava(){
+                public Ventana(){
                    panelSuperior();
                    panelMedio();
-                   panelNuevo();
+                                  //  panelNuevo();
                    panelInferior();
                    ventana();
                 }//acomodo
 
       public static void main(String ar[]){
-           VentanaJava v = new VentanaJava();
+           Ventana v = new Ventana();
  }//main
 }//class 
