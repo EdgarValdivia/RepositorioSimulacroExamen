@@ -1,4 +1,4 @@
-package com.example.edgarvaldivia.xprestamos;
+package com.example.edgarvaldivia.xprestamosgingerbread;
 
 import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;

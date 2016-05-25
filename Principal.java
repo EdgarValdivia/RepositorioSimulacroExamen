@@ -1,4 +1,4 @@
-package com.example.edgarvaldivia.xprestamos;
+package com.example.edgarvaldivia.xprestamosgingerbread;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -8,9 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class Principal extends AppCompatActivity {
-      Button prestar,prestamos,ayuda,acerca;
+    Button prestar,prestamos,ayuda,acerca;
 
-    private MediaPlayer mp;
+    private MediaPlayer mpPRIN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,32 +28,32 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 abrirVentanaPrestar();
-                mp = MediaPlayer.create(Principal.this,R.raw.principalrrr);
-                mp.start();
+                mpPRIN = MediaPlayer.create(Principal.this,R.raw.principalrrr);
+                mpPRIN.start();
             }
         });
         prestamos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirVentanaPrestamos();
-                mp = MediaPlayer.create(Principal.this,R.raw.principalrrr);
-                mp.start();
+                mpPRIN = MediaPlayer.create(Principal.this,R.raw.principalrrr);
+                mpPRIN.start();
             }
         });
         ayuda.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirVentanaAyuda();
-                mp = MediaPlayer.create(Principal.this,R.raw.principalrrr);
-                mp.start();
+                mpPRIN = MediaPlayer.create(Principal.this,R.raw.principalrrr);
+                mpPRIN.start();
             }
         });
         acerca.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 abrirVentanaAcerca();
-                mp = MediaPlayer.create(Principal.this,R.raw.principalrrr);
-                mp.start();
+                mpPRIN = MediaPlayer.create(Principal.this,R.raw.principalrrr);
+                mpPRIN.start();
             }
         });
     }
@@ -76,4 +76,5 @@ public class Principal extends AppCompatActivity {
         Intent var4 = new Intent(this,VentanaAcerca.class);
         startActivity(var4);
     }
+
 }
